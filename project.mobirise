@@ -24,15 +24,16 @@
         "display4Font": "Rubik",
         "display4Size": 1,
         "isRoundedButtons": true,
-        "isAnimatedOnScroll": false,
-        "isScrollToTopButton": false
+        "isAnimatedOnScroll": true,
+        "isScrollToTopButton": true
       },
       "additionalSetColors": [
         "#ffd1dc",
         "#2098be",
         "#daa3b0",
         "#f1f1f1",
-        "#8072c3"
+        "#8072c3",
+        "#e5658a"
       ]
     },
     "versionFirst": "4.3.2",
