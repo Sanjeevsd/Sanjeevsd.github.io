@@ -3,6 +3,7 @@ import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
 import { Grid } from "@material-ui/core";
+import Image from "../elements/Image";
 import CountDown from "reactjs-countdown";
 const propTypes = {
   ...SectionTilesProps.types,
@@ -59,6 +60,19 @@ const FeaturesTiles = ({
               <CountDown deadline="April 30, 2021" />
             </Grid>
           </Grid>
+          <div
+            className="hero-figure invitation reveal-from-bottom center-content illustration-element-01"
+            data-reveal-value="20px"
+            data-reveal-delay="800"
+          >
+            <Image
+              className="has-shadow"
+              src={require("./../../assets/images/invitation.jpg")}
+              alt="Hero"
+              width={896}
+              height={504}
+            />
+          </div>
         </div>
       </div>
     </section>
