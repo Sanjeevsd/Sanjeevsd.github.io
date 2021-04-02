@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import SoundP from "../../assets/BEHULEE.mp3";
 import useSound from "use-sound";
-import Button from "../elements/Button";
 import Image from "../elements/Image";
 
 import myImage from "../../assets/images/cercle.png";
@@ -39,28 +38,32 @@ const Hero = ({
     topDivider && "has-top-divider",
     bottomDivider && "has-bottom-divider"
   );
-  const [play] = useSound(SoundP, { volume: 0.75 });
-
+  const [playstate, setPlaystate] = useState(false);
+  const [play, { stop }] = useSound(SoundP, { volume: 0.75 });
+  const handelClick = () => {
+    if (playstate === false) {
+      setPlaystate(true);
+      play();
+    } else {
+      setPlaystate(false);
+      stop();
+    }
+  };
   return (
     <section {...props} className={outerClasses}>
       <div className="container-sm">
         <div className={innerClasses}>
           <div
+            onClick={handelClick}
             className="hero-content"
             style={{
               backgroundImage: `url(${myImage})`,
               backgroundPosition: "center",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
+              cursor: "pointer",
             }}
           >
-            <h4
-              className="text-weight-1 mt-0 mb-16 reveal-from-bottom"
-              data-reveal-delay="200"
-            >
-              We're Getting{" "}
-              <span className="text-weight-1 text-color-primary">Married</span>
-            </h4>
             <div className="container-xs">
               <p
                 className="couple-text text-color-error m-0 mb-32 reveal-from-bottom couple-text"
@@ -68,9 +71,6 @@ const Hero = ({
               >
                 Sanjeev <span className="text-color-lights"> &</span> Nandani
               </p>
-              <Button id="buttonsound" color="primary" onClick={play}>
-                Play
-              </Button>
             </div>
           </div>
           <div
