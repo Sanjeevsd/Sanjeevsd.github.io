@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import SoundP from "../../assets/BEHULEE.mp3";
@@ -49,6 +49,16 @@ const Hero = ({
       stop();
     }
   };
+
+  const [showText, setShowText] = useState(true);
+
+  useEffect(() => {
+    // Change the state every second or the time given by User.
+    const interval = setInterval(() => {
+      setShowText((showText) => !showText);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section {...props} className={outerClasses}>
       <div className="container-sm">
@@ -72,6 +82,10 @@ const Hero = ({
                 Sanjeev <span className="text-color-lights"> &</span> Nandani
               </p>
             </div>
+
+            <span style={{ color: showText ? "rgba(0, 0, 0,0)" : "#FFA173" }}>
+              Click me!
+            </span>
           </div>
           <div
             className="hero-figure reveal-from-bottom illustration-element-01"
