@@ -39,7 +39,7 @@ const Testimonial = ({
 
   const sectionHeader = {
     title: "The Reception",
-    paragraph: "2nd march 2021 (Baisakh 19) Suncity Party Palace",
+    paragraph: "2nd May 2021 (Baisakh 19) Suncity Party Palace",
   };
 
   return (
