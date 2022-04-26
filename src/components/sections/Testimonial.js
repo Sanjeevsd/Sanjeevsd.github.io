@@ -38,8 +38,8 @@ const Testimonial = ({
   );
 
   const sectionHeader = {
-    title: "The Reception",
-    paragraph: "2nd May 2021 (Baisakh 19) Suncity Party Palace",
+    title: "The Wedding",
+    paragraph: "30 april 2021",
   };
 
   return (

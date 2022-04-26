@@ -41,7 +41,7 @@ const FeaturesTiles = ({
   const sectionHeader = {
     title: "You are Invited",
     paragraph:
-      "You are invited to be an honourable guest at our wedding ceremony. We are anticipating seeing you at our grand wedding venue",
+      "You are invited to be an honourable guest at our wedding Anniversary. We are anticipating seeing you at our anniversary venue, kandaghari, ktm",
   };
 
   return (
@@ -57,7 +57,7 @@ const FeaturesTiles = ({
               </h1>
             </Grid>
             <Grid item xs={12} sm={8} md={8} lg={8} className="gridbody">
-              <CountDown deadline="April 30, 2021" />
+              <CountDown deadline="April 30, 2022" />
             </Grid>
           </Grid>
           <div
@@ -67,7 +67,7 @@ const FeaturesTiles = ({
           >
             <Image
               className="has-shadow"
-              src={require("./../../assets/images/invitation.jpg")}
+              src={require("./../../assets/images/anniversary.png")}
               alt="Hero"
               width={896}
               height={504}

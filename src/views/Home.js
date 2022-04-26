@@ -16,7 +16,7 @@ const Home = () => {
         imageFill
         className="illustration-section-02"
       />
-      <Testimonial topDivider />
+      {/* <Testimonial topDivider /> */}
     </>
   );
 };
